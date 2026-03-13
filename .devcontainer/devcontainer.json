@@ -1,0 +1,16 @@
+{
+  "name": "Hadoop Teaching Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "11"
+    }
+  },
+
+  "postCreateCommand": "sudo apt update && sudo apt install -y ssh rsync wget",
+
+  "containerEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/java-11-openjdk-amd64"
+  }
+}
